@@ -6,6 +6,6 @@ RUN apt-get update \
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-COPY run.sh run.sh
+COPY run.sh /usr/local/bin/
 
 
