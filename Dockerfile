@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 COPY run.sh run.sh 
-RUN apt install -y git
+RUN apt-get update \
+    && apt-get install git -y
 
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
