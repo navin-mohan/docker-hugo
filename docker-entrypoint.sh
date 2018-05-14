@@ -11,9 +11,9 @@ get_latest_release() {
     sed -E 's/.*"v([^"]+)".*/\1/'                                  # Pluck JSON value
 }
 
-HUGO_VERSION=get_latest_release "gohugoio/hugo"
+HUGO_VERSION=$(get_latest_release "gohugoio/hugo")
 
-wget "https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_$HUGO_VERSION_Linux-64bit.deb" -O hugo.deb
+wget `printf "https://github.com/gohugoio/hugo/releases/download/v%s/hugo_%s_Linux-64bit.deb" "$HUGO_VERSION" "$HUGO_VERSION"` -O hugo.deb
 dpkg -i hugo.deb
 rm hugo.deb
 
