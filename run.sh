@@ -35,6 +35,7 @@ cd ..
 
 # copy over the files
 yes | rm -rf target/*
+cp -rf ./repo/.circleci ./target/.circleci
 cp -rf ./repo/public/* ./target
 
 # commit and push the changes
