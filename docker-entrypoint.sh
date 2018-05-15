@@ -17,4 +17,4 @@ wget `printf "https://github.com/gohugoio/hugo/releases/download/v%s/hugo_%s_Lin
 dpkg -i hugo.deb
 rm hugo.deb
 
-exec "$@"
+# exec "$@"
