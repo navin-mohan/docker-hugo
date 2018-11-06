@@ -22,7 +22,7 @@ rm -rf public
 
 # fresh build
 hugo
-if [ ! -f CNAME ]; then
+if [ -f CNAME ]; then
      cp CNAME public/CNAME
 fi
 
