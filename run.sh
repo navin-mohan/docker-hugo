@@ -22,7 +22,9 @@ rm -rf public
 
 # fresh build
 hugo
-cp CNAME public/CNAME
+if [ ! -f CNAME ]; then
+     cp CNAME public/CNAME
+fi
 
 # copy over the changes to your target branch
 cd ..
